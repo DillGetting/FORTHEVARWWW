@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Filter the table by the following (leave blank for no filter)</h3>
+<form action="/filter.php" method="get">
+  <label for="filter_id">Student ID:</label><br>
+  <input type="text" id="filter_id" name="filter_id"><br>
+  <label for="filter_first">First Name: </label><br>
+  <input type="text" id="filter_first" name="filter_first"><br>
+  <label for="filter_last">Last Name: </label><br>
+  <input type="text" id="filter_last" name="filter_last">
+  <input type="submit" value="Submit">
+</form>
+<br><br>
+
+<?php 
+$filter_id = "%" . $_GET["filter_id"] . "%";
+$filter_first = "%" . $_GET["filter_first"] . "%";
+$filter_last = "%" . $_GET["filter_last"] . "%";
+require_once('filteredtable.php'); ?>
+
+<br>
+<a href="insertstudentform.html">Add a new student</a>
+</body>
+</html>
