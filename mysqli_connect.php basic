@@ -1,6 +1,6 @@
 <?php
 // Login constants
-DEFINE ('DB_USER', 'www');
+DEFINE('DB_USER', 'www');
 DEFINE('DB_PASSWORD', 'b');
 DEFINE('DB_HOST', 'localhost');
 DEFINE('DB_NAME', 'studentdatabase');
